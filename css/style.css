@@ -243,19 +243,16 @@ img {
     flex-direction: column;
     justify-content: space-evenly;
 }
-
 #section-proyectos h2 {
     font-size: 10em;
     color: var(--primary);
 }
-
 #section-proyectos .container-proyectos {
     width: 100%;
 
     display: flex;
     gap: 2vw;
 }
-
 #section-proyectos .container-proyectos .proyectos {
     width: 100%;
     height: 35vw;
@@ -268,33 +265,27 @@ img {
     flex-direction: column;
     justify-content: space-around;
 }
-
 .container-proyectos .proyectos img {
     width: 100%;
 }
-
 .container-proyectos .proyectos p {
     font-size: 5em;
     color: var(--primary);
 }
-
 .container-proyectos .proyectos .lenguajes {
     display: flex;
     gap: 12px;
 }
-
 .container-proyectos .proyectos .lenguajes div {
     background-color: var(--celeste-opaco);
     padding: 3px 10px;
     border-radius: 40px;
 }
-
 .container-proyectos .proyectos .lenguajes div p {
     font-size: 3em;
     font-weight: 400;
     color: var(--fondo-oscuro);
 }
-
 .container-proyectos .proyectos .botones {
     margin-top: 15%;
     width: 100%;
@@ -303,7 +294,6 @@ img {
     justify-content: center;
     gap: 24px;
 }
-
 .container-proyectos .proyectos .botones div {
     width: 45px;
     height: 45px;
@@ -314,10 +304,82 @@ img {
     justify-content: center;
     align-items: center;
 }
-
 .container-proyectos .proyectos .botones div img {
     width: 20px;
 }
+
+
+/* section about me */
+
+.section-about {
+    width: 100%;
+    height: 100vh;
+    padding: 32px 17vw;
+    color: var(--primary);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 72px;
+}
+
+.section-about h2 {
+    font-size: 12em;
+}
+
+.section-about .container-about-me {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.section-about .container-about-me .linea-tiempo {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.section-about .container-about-me .linea-tiempo .circulo {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.section-about .container-about-me .linea-tiempo .linea {
+    height: 3px;
+    width: 50%;
+    background-color: var(--primary);
+}
+
+.container-about-me .container-info-about {
+    width: 100%;
+
+    display: flex;
+}
+
+.container-about-me .container-info-about .info {
+    width: 50%;
+    padding: 0 25px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.container-about-me .container-info-about .info :nth-child(1) {
+    font-size: 8em;
+}
+
+.container-about-me .container-info-about .info :nth-child(2) {
+    font-size: 5em;
+}
+
 
 @media (max-width: 600px) {
     nav {
@@ -409,4 +471,44 @@ img {
     #section-proyectos .container-proyectos .proyectos {
         height: 60vh;
     }
+
+    /* .section-about {
+        position: relative;
+    } */
+    .section-about .container-about-me {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .section-about .container-about-me .linea-tiempo {
+        width: 25px;
+        
+        flex-direction: column;
+    }
+
+    .section-about .container-about-me .linea-tiempo .circulo {
+        width: 20px;
+    }
+
+    .section-about .container-about-me .linea-tiempo .linea {
+        height: 50%;
+        width: 3px;
+    }
+
+    .container-about-me .container-info-about {
+        flex-direction: column;
+        gap: 24px;
+    } 
+
+    .container-about-me .container-info-about .info {
+        width: 100%;
+    }
+
+    .container-about-me .container-info-about .info :nth-child(1) {
+        font-size: 7em;
+    }
+    .container-about-me .container-info-about .info :nth-child(2) {
+        font-size: em;
+    }
+
 }
