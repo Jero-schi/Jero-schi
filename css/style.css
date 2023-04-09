@@ -107,7 +107,7 @@ main .img-presentacion div img {
 
 /* main barrita  */
 main .contactos {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -380,6 +380,42 @@ img {
     font-size: 5em;
 }
 
+footer {
+    width: 100%;
+    height: 20vh;
+    padding: 32px 17vw;
+    color: var(--primary);
+    
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+footer p {
+    width: 33%;
+    font-size: 5em;
+}
+
+footer div {
+    width: 66%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2vw;
+}
+
+footer div a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 4em;
+    font-weight: 200;
+}
+
+footer div img {
+    width: 20px;
+}
+
 
 @media (max-width: 600px) {
     nav {
@@ -395,6 +431,8 @@ img {
     main {
         padding-top: 0;
         justify-content: space-evenly;
+        height: 100vh;
+        border-radius: 0 0 150px 150px;
     }
 
     main .presentacion :nth-child(1) {
@@ -413,10 +451,10 @@ img {
         flex-direction: row;
         width: 250px;
         height: 50px;
-        bottom: 25px;
+        bottom: 0px;
         left: 0;
         right: 0;
-        margin: 5% auto;
+        margin: 3% auto;
     }
 
     main .contactos .icon-presentacion {
@@ -472,9 +510,11 @@ img {
         height: 60vh;
     }
 
-    /* .section-about {
-        position: relative;
-    } */
+    /* section-about */
+    .section-about {
+        padding: 32px 10vw;
+        height: 80vh;
+    }
     .section-about .container-about-me {
         flex-direction: row;
         gap: 12px;
@@ -510,5 +550,26 @@ img {
     .container-about-me .container-info-about .info :nth-child(2) {
         font-size: em;
     }
+
+    footer {
+        padding: 0 10vw;
+
+        flex-direction: column;
+        gap: 0;
+    }
+
+    footer p {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer div {
+        width: 100%;
+        margin-top: 24px;
+        justify-content: center;
+        gap: 5vw;
+
+    }
+
 
 }
