@@ -419,6 +419,46 @@ footer div img {
     width: 20px;
 }
 
+@media (min-width: 1500px) {
+    main .img-presentacion {
+        width: 350px;
+        height: 350px;
+    }
+
+    main .img-presentacion div {
+        top: -98px;
+        width: 345px;
+        height: 444px;
+    }
+
+    main .img-presentacion div img {
+        top: -65px;
+        left: 15px;
+        width: 315px;   
+    }
+
+    .container-proyectos .proyectos p {
+        font-size: 6em;
+    }
+
+    .container-proyectos .proyectos .lenguajes div {
+        padding: 5px 12px;
+    }
+
+    .container-proyectos .proyectos .lenguajes div p {
+        font-size: 4em;
+    }
+
+    .container-proyectos .proyectos .botones div {
+        width: 60px;
+        height: 60px;
+    }
+
+    .container-proyectos .proyectos .botones div img {
+        width: 25px;
+    }
+}
+
 
 @media (max-width: 600px) {
     nav {
