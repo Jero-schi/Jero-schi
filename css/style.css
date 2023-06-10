@@ -241,6 +241,7 @@ img {
     width: 100%;
     height: 100vh;
     padding: 32px 17vw;
+    /* background-color:blue; */
 
     display: flex;
     flex-direction: column;
@@ -252,13 +253,16 @@ img {
 }
 #section-proyectos .container-proyectos {
     width: 100%;
+    height: 90%;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 2vw;
 }
 #section-proyectos .container-proyectos .proyectos {
-    width: 100%;
-    height: 35vw;
+    width: 90%;
+    height: 90%;
     padding: 20px;
     border-radius: 20px;
     border: 1px solid var(--primary);
@@ -267,9 +271,12 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap: 8px;
 }
 .container-proyectos .proyectos img {
     width: 100%;
+    height: 50%;
+    object-fit: contain;
 }
 .container-proyectos .proyectos p {
     font-size: 5em;
