@@ -284,6 +284,7 @@ img {
 }
 .container-proyectos .proyectos .lenguajes {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
 }
 .container-proyectos .proyectos .lenguajes div {
@@ -553,12 +554,14 @@ footer div img {
     #section-proyectos .container-proyectos {
         margin-top: 5vh;
         
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: center;
         gap: 5vh;
     }
 
     #section-proyectos .container-proyectos .proyectos {
-        height: 60vh;
+        height: 100%;
     }
 
     /* section-about */
