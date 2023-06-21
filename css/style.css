@@ -50,6 +50,23 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: var(--fondo-oscuro);
+
+    position: relative;
+}
+
+nav ul li .subrayado {
+    width: 100%;
+    height: 2px;
+    background-color: #283635;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+nav ul li:hover .subrayado {
+    transform: scaleX(1);
 }
 
 /* main */
@@ -57,14 +74,19 @@ nav ul li a {
 main {
     height: 105vh;
     width: 100%;
-    background-color: var(--fondo-claro);
+    background: var(--fondo-claro);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     padding-top: 10vh; 
-    border-radius: 0 0 50% 50%;
+    border-radius: 0 0 50% 50%;;
 }
+
+@keyframes background_color {
+    
+}
+
 main .presentacion {
     display: flex;
     flex-direction: column;
@@ -103,9 +125,17 @@ main .img-presentacion div {
 }
 main .img-presentacion div img {
     position: absolute;
-    top: -65px;
+    top: 30px; /* -65 */
     left: 15px;
     width: 225px;
+
+    animation: img .6s ease-out both;
+}
+
+@keyframes img {
+    to {
+        top: -65px;
+    }
 }
 
 /* main barrita  */
@@ -121,6 +151,17 @@ main .contactos {
     padding: 12px;
     position: fixed;
     left: 48px;
+
+    animation: barrita 1s linear both;
+}
+
+@keyframes barrita {
+    from {
+        left: 0;
+    }
+    to {
+        left: 40px;
+    }
 }
 main .contactos .icon-presentacion {
     width: 25px;
@@ -181,26 +222,39 @@ img {
     font-weight: 200;
     color: var(--secondary);
 }
+
+.move {
+    width: 10% !important;
+}
+
 #skills .tarjeta-skills #html {
     width: 90%;
     height: 10px;
     background-color: var(--primary);
     border-radius: 50px;
     box-shadow: 4px 4px 10px 2px #B5F5F342;
+
+    transition: width 1.2s ease-in-out;
 }
+
 #skills .tarjeta-skills #css {
     width: 65%;
     height: 10px;
     background-color: var(--primary);
     border-radius: 50px;
     box-shadow: 4px 4px 10px 2px #B5F5F342;
+
+    transition: width 1.2s ease-in-out;
 }
+
 #skills .tarjeta-skills #javascript {
     width: 40%;
     height: 10px;
     background-color: var(--primary);
     border-radius: 50px;
     box-shadow: 4px 4px 10px 2px #B5F5F342;
+
+    transition: width 1.2s ease-in-out;
 }
 
 #skills h3 {
@@ -239,13 +293,13 @@ img {
 /* section proyectos */
 #section-proyectos {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding: 32px 17vw;
-    /* background-color:blue; */
 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 24px;
 }
 #section-proyectos h2 {
     font-size: 10em;
@@ -262,17 +316,24 @@ img {
 }
 #section-proyectos .container-proyectos .proyectos {
     width: 90%;
-    height: 90%;
+    height: 97%;
     padding: 20px;
     border-radius: 20px;
-    border: 1px solid var(--primary);
-    box-shadow: 4px 4px 10px 0px #B5F5F3BF;
+    box-shadow: 0px 0px 12px -3px #B5F5F3BF;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 8px;
 }
+
+#section-proyectos .container-proyectos .proyectos:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 0px #B5F5F3BF;
+
+    transition: all 0.2s ease-in-out;
+}
+
 .container-proyectos .proyectos img {
     width: 100%;
     height: 50%;
@@ -315,6 +376,12 @@ img {
     justify-content: center;
     align-items: center;
 }
+
+.container-proyectos .proyectos .botones div:hover {
+    background-color: #9cd4d1;
+
+    transition: all 0.1s linear;
+}
 .container-proyectos .proyectos .botones div img {
     width: 20px;
 }
@@ -324,8 +391,8 @@ img {
 
 .section-about {
     width: 100%;
-    height: 100vh;
-    padding: 32px 17vw;
+    height: 100%;
+    padding: 80px 17vw;
     color: var(--primary);
 
     display: flex;
